@@ -1,4 +1,3 @@
-// layouts/DashboardLayout.tsx
 import {
   Box,
   Drawer,
