@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useState, type JSX } from "react";
+import { useAuth } from "../context/AuthContext";  // Importar el hook useAuth para acceder al contexto
 
 interface MenuItemType {
   text: string;
@@ -26,8 +27,9 @@ const menuItems: MenuItemType[] = [
   { text: "Usuarios", path: "/dashboard/users" },
 ];
 
-export function DashboardLayout(): JSX.Element {
+export default function DashboardLayout(): JSX.Element {
   const navigate = useNavigate();
+  const { user } = useAuth(); // Obtener el usuario desde el contexto
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const handleUserClick = (e: React.MouseEvent<HTMLElement>): void => {
@@ -81,7 +83,7 @@ export function DashboardLayout(): JSX.Element {
               sx={{ cursor: "pointer" }}
             >
               <Avatar src="/user.png" />
-              <Typography>Admin User</Typography>
+              <Typography>{user?.username || "Usuario"}</Typography> {/* Aquí mostramos el nombre del usuario */}
             </Box>
 
             <Menu

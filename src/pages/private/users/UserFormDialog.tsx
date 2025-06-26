@@ -8,9 +8,8 @@ import {
   
   interface User {
     id: string;
-    name: string;
-    email: string;
     username: string;
+    email: string;
     password: string;
   }
   
@@ -22,18 +21,19 @@ import {
   }
   
   export default function UserFormDialog({ open, onClose, onSaved, user }: Props): JSX.Element {
-    const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
   
     useEffect(() => {
       if (user) {
-        setName(user.name);
+        setUsername(user.username);
         setEmail(user.email);
+        setPassword(user.password);
       } else {
-        setName("");
+        setUsername("");
         setEmail("");
+        setPassword("");
       }
     }, [user]);
   
@@ -54,10 +54,11 @@ import {
         <DialogTitle>{user ? "Editar usuario" : "Nuevo usuario"}</DialogTitle>
         <DialogContent sx={{ mt: 1 }}>
           <TextField
-            label="Nombre"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            label="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             fullWidth
+            sx={{ mt: 2 }}
           />
           <TextField
             label="Email"
@@ -70,13 +71,6 @@ import {
             label="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            fullWidth
-            sx={{ mt: 2 }}
-          />
-          <TextField
-            label="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
             fullWidth
             sx={{ mt: 2 }}
           />

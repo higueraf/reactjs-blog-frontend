@@ -10,8 +10,9 @@ import UserFormDialog from "./UserFormDialog";
 
 interface User {
   id: string;
-  name: string;
+  username: string;
   email: string;
+  password: string;
 }
 
 export default function Users(): JSX.Element {
@@ -21,14 +22,14 @@ export default function Users(): JSX.Element {
   const [editing, setEditing] = useState<User | null>(null);
 
   const fetchUsers = (): void => {
-    axios.get("https://nestjs-blog-backend-api.desarrollo-software.xyz/users")
+    axios.get("https://nestjs-blog-backend-api.desarrollo-software.xyz/users?page=1&limit=10&isActive=true")
         .then((res) => setUsers(res.data.data.items));
   };
 
   useEffect(fetchUsers, []);
 
   const filtered = users.filter((u) =>
-    u.name.toLowerCase().includes(filter.toLowerCase())
+    u.username.toLowerCase().includes(filter.toLowerCase())
   );
 
   const remove = (id: string): void => {
@@ -63,7 +64,7 @@ export default function Users(): JSX.Element {
       <List>
         {filtered.map((u) => (
           <ListItem key={u.id}>
-            <ListItemText primary={u.name} secondary={u.email} />
+            <ListItemText primary={u.username} secondary={u.email} />
             <ListItemSecondaryAction>
               <IconButton onClick={() => openEdit(u)}><Edit /></IconButton>
               <IconButton onClick={() => remove(u.id)}><Delete /></IconButton>
@@ -76,7 +77,7 @@ export default function Users(): JSX.Element {
         open={open}
         onClose={() => setOpen(false)}
         onSaved={fetchUsers}
-        user={editing}
+        user={editing || null}
       />
     </Box>
   );
