@@ -22,6 +22,7 @@ interface MenuItemType {
 }
 
 const menuItems: MenuItemType[] = [
+  { text: "Cursos", path: "/dashboard/courses" },
   { text: "Posts", path: "/dashboard/posts" },
   { text: "Categorías", path: "/dashboard/categories" },
   { text: "Usuarios", path: "/dashboard/users" },
