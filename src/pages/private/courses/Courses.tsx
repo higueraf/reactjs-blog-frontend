@@ -25,8 +25,8 @@ const CoursesList: React.FC = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('https://nestjs-blog-backend-api.desarrollo-software.xyz/cursos');
-        setCursos(response.data.data.items); // Ajusta según la estructura de la respuesta
+        const response = await axios.get('https://nestjs-blog-backend-api.desarrollo-software.xyz/cursos?page=1&limit=20');
+        setCursos(response.data.data.items);
       } catch (error) {
         console.error('Error fetching courses:', error);
       }
