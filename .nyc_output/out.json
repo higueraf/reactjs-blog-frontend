@@ -1,0 +1,254 @@
+{
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/App.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/App.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/main.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/main.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/setupTests.ts": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/setupTests.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/vite-env.d.ts": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/vite-env.d.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/api/axios.ts": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/api/axios.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/components/PublicFooter.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/components/PublicFooter.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/components/PublicHeader.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/components/PublicHeader.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/context/AuthContext.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/context/AuthContext.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/layouts/DashboardLayout.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/layouts/DashboardLayout.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/layouts/PublicLayout.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/layouts/PublicLayout.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/index.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/index.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/PrivateRoute.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/PrivateRoute.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/privateRoutes.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/privateRoutes.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/publicRoutes.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/routes/publicRoutes.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/Home.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/Home.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/Login.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/Login.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/PostDetail.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/PostDetail.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/Register.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/public/Register.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/Categories.test.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/Categories.test.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/Categories.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/Categories.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/CategoryFormDialog.test.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/CategoryFormDialog.test.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/CategoryFormDialog.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/categories/CategoryFormDialog.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/courses/CourseForm.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/courses/CourseForm.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/courses/Courses.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/courses/Courses.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/posts/PostFormDialog.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/posts/PostFormDialog.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/posts/Posts.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/posts/Posts.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/users/UserFormDialog.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/users/UserFormDialog.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/users/Users.tsx": {
+    "path": "C:/Users/Francisco Higuera/Documents/UTE/Programación III/blog-app/src/pages/private/users/Users.tsx",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  }
+}

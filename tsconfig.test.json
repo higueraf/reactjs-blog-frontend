@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest", "cypress", "node"],
+    "isolatedModules": false,
+    "jsx": "react-jsx",
+     "module": "esnext",  // or "es2020" or "node16"
+    "target": "esnext",  // or "es2020"
+  },
+  "include": [
+    "src/**/*",
+    "__tests__/**/*",
+    "cypress/**/*"
+  ]
+}

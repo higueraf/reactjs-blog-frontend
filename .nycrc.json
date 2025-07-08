@@ -1,0 +1,7 @@
+{
+  "all": true,
+  "include": ["src/**/*.{js,jsx,ts,tsx}"],
+  "exclude": ["**/*.spec.js", "**/*.test.js", "**/*.cy.js"],
+  "reporter": ["text", "html", "lcov"],
+  "extension": [".js", ".jsx", ".ts", ".tsx"]
+}

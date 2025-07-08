@@ -8,7 +8,7 @@ import {
     Button,
   } from "@mui/material";
   import { useState, useEffect, type JSX } from "react";
-  import axios from "axios";
+  import axiosInstance from "../../../api/axios";
   
   interface Category {
     id: string;
@@ -37,8 +37,8 @@ import {
     const handleSave = (): void => {
       const data = { name };
       const req = category
-        ? axios.put(`https://nestjs-blog-backend-api.desarrollo-software.xyz/categories/${category.id}`, data)
-        : axios.post("https://nestjs-blog-backend-api.desarrollo-software.xyz/categories", data);
+        ? axiosInstance.put(`/categories/${category.id}`, data)
+        : axiosInstance.post("/categories", data);
       req.then(() => {
         onSaved();
         onClose();
