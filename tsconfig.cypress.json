@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "supportFile": false,
+    "strict": true
+  },
+  "include": [
+    "cypress/**/*.ts"
+  ]
+}
