@@ -1,4 +1,3 @@
-// pages/private/Categories.tsx
 import { useState, useEffect, type JSX } from "react";
 import {
   Box,
@@ -12,8 +11,8 @@ import {
   ListItemSecondaryAction,
 } from "@mui/material";
 import { Search, Edit, Delete } from "@mui/icons-material";
-import axios from "axios";
 import CategoryFormDialog from "./CategoryFormDialog";
+import axiosIntance from "../../../api/axios";
 
 interface Category {
   id: string;
@@ -27,8 +26,8 @@ export default function Categories(): JSX.Element {
   const [editing, setEditing] = useState<Category | null>(null);
 
   const fetchCategories = (): void => {
-    axios
-      .get("https://nestjs-blog-backend-api.desarrollo-software.xyz/categories")
+    axiosIntance
+      .get("/categories")
       .then((res) => setCategories(res.data.data.items));
   };
 
@@ -40,8 +39,8 @@ export default function Categories(): JSX.Element {
 
   const remove = (id: string): void => {
     if (confirm("¿Eliminar esta categoría?")) {
-      axios
-        .delete(`https://nestjs-blog-backend-api.desarrollo-software.xyz/categories/${id}`)
+      axiosIntance
+        .delete(`/categories/${id}`)
         .then(fetchCategories);
     }
   };
