@@ -13,8 +13,8 @@ import {
   ListItemButton,
 } from "@mui/material";
 import { Outlet, useNavigate } from "react-router-dom";
-import { useState, type JSX } from "react";
-import { useAuth } from "../context/AuthContext";  // Importar el hook useAuth para acceder al contexto
+import { useEffect, useState, type JSX } from "react";
+import { useAuth } from "../context/AuthContext"; // Importar el hook useAuth para acceder al contexto
 
 interface MenuItemType {
   text: string;
@@ -22,6 +22,7 @@ interface MenuItemType {
 }
 
 const menuItems: MenuItemType[] = [
+  { text: "Productos", path: "/dashboard/products" },
   { text: "Cursos", path: "/dashboard/courses" },
   { text: "Posts", path: "/dashboard/posts" },
   { text: "Categorías", path: "/dashboard/categories" },
@@ -30,8 +31,14 @@ const menuItems: MenuItemType[] = [
 
 export default function DashboardLayout(): JSX.Element {
   const navigate = useNavigate();
-  const { user } = useAuth(); // Obtener el usuario desde el contexto
+  const { user } = useAuth();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  useEffect(() => {
+    if (user && user.role !== "ADMIN") {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const handleUserClick = (e: React.MouseEvent<HTMLElement>): void => {
     setAnchorEl(e.currentTarget);
@@ -84,7 +91,8 @@ export default function DashboardLayout(): JSX.Element {
               sx={{ cursor: "pointer" }}
             >
               <Avatar src="/user.png" />
-              <Typography>{user?.username || "Usuario"}</Typography> {/* Aquí mostramos el nombre del usuario */}
+              <Typography>{user?.username || "Usuario"}</Typography>{" "}
+              {/* Aquí mostramos el nombre del usuario */}
             </Box>
 
             <Menu

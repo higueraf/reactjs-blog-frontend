@@ -5,8 +5,9 @@ import DashboardLayout from "../layouts/DashboardLayout";
 
 import type { RouteObject } from "react-router-dom";
 import PrivateRoute  from "./PrivateRoute";
-import CoursesList from "../pages/private/courses/courses";
+import CoursesList from "../pages/private/courses/Courses";
 import CourseForm from "../pages/private/courses/CourseForm";
+import Products from "../pages/private/products/Products";
 
 export const privateRoutes: RouteObject = {
     path: "/dashboard",
@@ -18,12 +19,10 @@ export const privateRoutes: RouteObject = {
   children: [
     { path: "posts", element: <Posts /> },
     { path: "categories", element: <Categories /> },
+    { path: "products", element: <Products /> },
     { path: "users", element: <Users /> },
     { path: "courses", element: <CoursesList /> },
-    
-    
     { path: "course-form", element: <CourseForm /> },
-    
     { path: "course-form/:id", element: <CourseForm /> },
   ],
 };

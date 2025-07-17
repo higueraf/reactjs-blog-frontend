@@ -22,10 +22,20 @@ export default function Login(): JSX.Element {
       if (response.data.success) {
         const { access_token } = response.data.data;
         const decodedToken = JSON.parse(atob(access_token.split('.')[1]));
-        const { username, email } = decodedToken;
-        login({ username, email });
-        localStorage.setItem("token", access_token);
-        navigate("/dashboard");
+        const { username, email, role } = decodedToken;
+
+        login({
+          username,
+          email,
+          role,
+          token: access_token,
+        });
+
+        if (role === "admin" || role === "ADMIN") {
+          navigate("/dashboard");
+        } else {
+          navigate("/");
+        }
       } else {
         setError("Error al iniciar sesión. Intenta de nuevo.");
       }
@@ -40,7 +50,7 @@ export default function Login(): JSX.Element {
       p={4} 
       maxWidth="400px" 
       mx="auto"
-      data-testid="login-page" // Añadido para las pruebas
+      data-testid="login-page"
     >
       <TextField
         label="Nombre de usuario"
@@ -48,7 +58,7 @@ export default function Login(): JSX.Element {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         sx={{ mb: 2 }}
-        inputProps={{ "data-testid": "username-input" }} // Añadido
+        inputProps={{ "data-testid": "username-input" }}
       />
       <TextField
         label="Contraseña"
@@ -57,13 +67,13 @@ export default function Login(): JSX.Element {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         sx={{ mb: 2 }}
-        inputProps={{ "data-testid": "password-input" }} // Añadido
+        inputProps={{ "data-testid": "password-input" }}
       />
       <Button 
         fullWidth 
         variant="contained" 
         onClick={handleSubmit}
-        data-testid="login-button" // Añadido
+        data-testid="login-button"
       >
         Ingresar
       </Button>
@@ -72,7 +82,7 @@ export default function Login(): JSX.Element {
         <Alert 
           severity="error" 
           sx={{ mt: 2 }}
-          data-testid="error-message" // Añadido
+          data-testid="error-message"
         >
           {error}
         </Alert>

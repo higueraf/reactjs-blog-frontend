@@ -5,12 +5,13 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from "
 interface User {
   username: string;
   email: string;
+  role?: string;
 }
 
 interface AuthContextType {
   user: User | null;
   token: string | null;
-  login: (data: User) => void;
+  login: (data: User & { token: string }) => void;
   logout: () => void;
   fetchUser: () => void;
 }
@@ -22,19 +23,24 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
-    const savedUser = localStorage.getItem("user");
-    const savedToken = localStorage.getItem("token");
-    if (savedUser && savedToken) {
-      setUser(JSON.parse(savedUser));
-      setToken(savedToken);
+    try {
+      const savedUser = localStorage.getItem("user");
+      const savedToken = localStorage.getItem("token");
+      if (savedUser && savedToken) {
+        setUser(JSON.parse(savedUser));
+        setToken(savedToken);
+      }
+    } catch {
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
     }
   }, []);
 
-  const login = (data: User): void => {
+  const login = (data: User & { token: string }): void => {
     localStorage.setItem("user", JSON.stringify(data));
-    localStorage.setItem("token", data.email); // Assuming email is the token for demo purposes
-    setUser(data);
-    setToken(data.email); // Storing the email as token
+    localStorage.setItem("token", data.token);
+    setUser({ username: data.username, email: data.email, role: data.role });
+    setToken(data.token);
   };
 
   const logout = (): void => {
@@ -46,13 +52,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchUser = async (): Promise<void> => {
     try {
-      const response = await axios.get("https://nestjs-blog-backend-api.desarrollo-software.xyz/auth/me", {
+      const response = await axios.get("http://localhost:3000/auth/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUser(response.data.user);
     } catch (error) {
       console.error("Failed to fetch user", error);
-      logout(); // If fetching user fails, log them out
+      logout();
     }
   };
 
@@ -67,4 +73,4 @@ export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (!context) throw new Error("useAuth debe usarse dentro de AuthProvider");
   return context;
-}
+};
